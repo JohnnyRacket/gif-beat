@@ -72,7 +72,7 @@ class GIFCapture extends Component {
   render() {
     return (
         <div className="video-container">
-            <div style={{width: '100px', position: 'fixed', bottom: '4rem', left: '50%', transform: 'translateX(-50%)'}}>
+            <div style={{width: '100px', position: 'absolute', bottom: '4rem', left: '50%', transform: 'translateX(-50%)'}}>
                 <Circle percent={this.state.progress * 100} strokeWidth="10" strokeColor="#e74c3c" />
                 <button style={{position: 'absolute',left: '50%', transform: 'translate(-50%, -50%)', top: '48%', background: 'transparent', fontWeight: 'bold', color: 'white', border: 'none', fontSize: '2rem', outline: 'none'}} onClick={() => this.captureGIF()}>Rec.</button>
 

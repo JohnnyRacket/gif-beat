@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as gifshot from 'gifshot';
-import {Line} from 'rc-progress';
+import {Circle} from 'rc-progress';
 
 class GIFCapture extends Component {
 
@@ -72,11 +72,12 @@ class GIFCapture extends Component {
   render() {
     return (
         <div className="video-container">
-            <div style={{width: '100%', position: 'absolute', marginTop: '-16px'}}>
-                <Line percent={this.state.progress * 100} strokeWidth="4" strokeColor="#D3D3D3" />
+            <div style={{width: '100px', position: 'fixed', bottom: '4rem', left: '50%', transform: 'translateX(-50%)'}}>
+                <Circle percent={this.state.progress * 100} strokeWidth="10" strokeColor="#e74c3c" />
+                <button style={{position: 'absolute',left: '50%', transform: 'translate(-50%, -50%)', top: '48%', background: 'transparent', fontWeight: 'bold', color: 'white', border: 'none', fontSize: '2rem', outline: 'none'}} onClick={() => this.captureGIF()}>Rec.</button>
+
             </div>
             <video className="video" id="preview-video"></video>
-            <button style={{position: 'fixed', bottom: '2rem', left: '50%'}} onClick={() => this.captureGIF()}>click 4 gif</button>
         </div>
     );
   }

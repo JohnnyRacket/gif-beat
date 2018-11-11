@@ -28,13 +28,14 @@ code {
   transform: translate(-50%, -50%);
   z-index: -1;
 }
-@media screen and (max-aspect-ratio: 1920/1080) {
+
+@media screen and (max-aspect-ratio: 4/3) {
   .video-container > video {
     height: 100%;
     width: auto;
   }
 }
-@media screen and (min-aspect-ratio: 1920/1080) {
+@media screen and (min-aspect-ratio: 4/3) {
   .video-container > video {
     width: 100%;
     height: auto;

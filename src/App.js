@@ -3,13 +3,15 @@ import logo from './logo.svg';
 import './App.css';
 import * as gifshot from 'gifshot';
 import Axios from 'axios';
-import secrets from './secrets/config.json'
+import secrets from './secrets/config.json';
+import {Line} from 'rc-progress';
 
 class App extends Component {
 
   state = {
     video: null,
-    gif: "http://i.imgur.com/IUNMjf1.gif"
+    gif: "http://i.imgur.com/IUNMjf1.gif",
+    progress: 0
   }
 
   async componentDidMount(){
@@ -57,7 +59,10 @@ class App extends Component {
       // The horizontal text alignment of the text that covers the animated GIF
       'textAlign': 'right',
       // The vertical text alignment of the text that covers the animated GIF
-      'textBaseline': 'bottom'
+      'textBaseline': 'bottom',
+      'numFrames': 15,
+      'progressCallback': (progress) => {this.setState({progress: progress});},
+      'completeCallback': () => {this.setState({progress: 0});console.log('done')}
     }, (obj) => {
       if(!obj.error) {
         console.log(obj);
@@ -79,7 +84,6 @@ class App extends Component {
 
   async submitGIF(image){
     Axios.post(`https://api.imgur.com/3/album/${this.state.albumId}/add`, image, {headers: {Authorization: "Client-ID " + secrets.client_id}});
-
   }
 
   async createAlbum(){
@@ -105,9 +109,14 @@ class App extends Component {
             Learn React
           </a>
           {this.state.gif ? <x-gif src={this.state.gif}></x-gif> : ""}
-          <video height="200" width="200" id="preview-video"></video>
-          <button onClick={() => this.createAlbum()}>host album</button>
+          <div style={{margin: '0 auto'}}>
+            <div style={{width: '267px', position: 'absolute', marginTop: '-16px'}}>
+              <Line percent={this.state.progress * 100} strokeWidth="4" strokeColor="#D3D3D3" />
+            </div>
+            <video height="200" width="200" id="preview-video"></video>
 
+          </div>
+          <button onClick={() => this.createAlbum()}>host album</button>
           <button onClick={() => this.captureGIF()}>click 4 gif</button>
           <input onChange={(e) => {this.setState({albumId: e.target.value})}} ></input>
         </header>

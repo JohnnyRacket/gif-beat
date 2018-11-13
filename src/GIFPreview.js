@@ -5,7 +5,7 @@ import secrets from './secrets/config.json';
 class GIFPreview extends Component {
 
   async submitGIF(image){
-    Axios.post(`https://api.imgur.com/3/album/${this.props.albumId}/add`, image, {headers: {Authorization: "Client-ID " + secrets.client_id}});
+    Axios.post(`https://api.imgur.com/3/album/${this.props.albumId}/add`, image, {headers: {Authorization: "Client-ID " + secrets.imgur.client_id}});
   }
 
   render() {

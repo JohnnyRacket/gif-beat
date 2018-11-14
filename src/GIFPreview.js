@@ -5,8 +5,13 @@ import secrets from './secrets/config.json';
 class GIFPreview extends Component {
 
   async submitGIF(image){
-    Axios.post(`https://api.imgur.com/3/album/${this.props.albumId}/add`, image, {headers: {Authorization: "Client-ID " + secrets.imgur.client_id}});
-  }
+    console.log(this.props.albumId);
+    let res = await Axios.post('https://api.imgur.com/3/image', {image: this.props.gif.split(',')[1]}, {headers: {Authorization: "Client-ID " + secrets.imgur.client_id}});
+    console.log(res);
+    let deletehash = res.data.data.deletehash;
+    await Axios.post(`https://api.imgur.com/3/album/${this.props.albumId}/add`, {deletehashes:[deletehash]}, {headers: {Authorization: "Client-ID " + secrets.imgur.client_id}});
+    this.props.exit();
+  }//8UFXOXUBAfgygf4
 
   render() {
     return (

@@ -26,8 +26,8 @@ class GIFCapture extends Component {
   captureGIF(){
 
     gifshot.createGIF({
-        'gifWidth': 480,
-        'gifHeight': 360,
+        'gifWidth': 352,
+        'gifHeight': 240,
       // You can pass an existing video element to use for the webcam GIF creation process,
       // and this video element will not be hidden (useful when used with the keepCameraOn option)
       // Pro tip: Set the height and width of the video element to the same values as your future GIF
@@ -40,7 +40,7 @@ class GIFCapture extends Component {
       // Note: Passing an existing camera stream will allow you to create another GIF and/or snapshot without
       //	asking for the user's permission to access the camera again if you are not using SSL
       'cameraStream': this.state.stream,
-      'text': this.state.albumId,
+      'text': this.props.albumId,
       // The font weight of the text that covers the animated GIF
       'fontWeight': 'bold',
       // The font size of the text that covers the animated GIF
@@ -71,7 +71,7 @@ class GIFCapture extends Component {
 
   render() {
     return (
-        <div className="video-container">
+        <div className="video-container" style={{zIndex: 100}}>
             <div style={{width: '100px', position: 'absolute', bottom: '4rem', left: '50%', transform: 'translateX(-50%)'}}>
                 <Circle percent={this.state.progress * 100} strokeWidth="10" strokeColor="#e74c3c" />
                 <button style={{position: 'absolute',left: '50%', transform: 'translate(-50%, -50%)', top: '48%', background: 'transparent', fontWeight: 'bold', color: 'white', border: 'none', fontSize: '2rem', outline: 'none'}} onClick={() => this.captureGIF()}>Rec.</button>

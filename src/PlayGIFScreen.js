@@ -35,6 +35,7 @@ class PlayGIFScreen extends Component {
     return (
       <div className="App" style={{height: '100vh', width: '100vw'}}>
           {this.state.gifs.length > 0 ? <x-gif fill ping-pong={this.state.pingpong} bpm={this.state.bpm} src={this.state.gifs[this.state.index].link}></x-gif> : <x-gif fill src="https://i.imgur.com/IUNMjf1.gif"></x-gif>}
+          <button style={{position: 'absolute', bottom: '2rem', left: '2rem'}} onClick={() => this.getGIFs()}>🔄</button>
       </div>
     );
   }

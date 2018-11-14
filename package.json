@@ -2,7 +2,7 @@
   "name": "gif-beat",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://johnnyracket.github.io/beat-gif",
+  "homepage": "https://johnnyracket.github.io/beat-gif",
   "dependencies": {
     "axios": "^0.18.0",
     "gifshot": "^0.4.5",

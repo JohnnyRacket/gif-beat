@@ -19,7 +19,7 @@ class App extends Component {
     let res = await Axios.post("https://api.imgur.com/3/album",{ids: ["IUNMjf1"], title:'test'} ,{headers: {Authorization: "Client-ID " + secrets.imgur.client_id}});
     console.log(res.data.data.id);
     console.log(res.data.data.deletehash);
-    this.setState({albumId: res.data.data.id, deletehashe: res.data.data.deletehash, hostScreen: true});
+    this.setState({albumId: res.data.data.id, deletehash: res.data.data.deletehash, hostScreen: true});
     console.log('create album called');
   }
 
@@ -27,7 +27,7 @@ class App extends Component {
 
   render() {
     return (
-      <div style={{width: '100%', height: '100vh',background: `URL(${bg})`, boxSizing: 'border-box' }}>
+      <div style={{width: '100%', height: '100%', minHeight: '100vh', background: `URL(${bg})`, boxSizing: 'border-box' }}>
         {!this.state.captureScreen && !this.state.hostScreen ? (
         <div style={{width: '100%', height: '100%',  padding: '4rem 1rem',  boxSizing: 'border-box' }}>
           <div style={{display:'flex', flexDirection: 'column', width: '100%', maxWidth: '20rem', margin: '0 auto', background: 'white', padding: '2rem', borderRadius: '1rem', boxShadow: '0 0 90px 60px #fff', boxSizing: 'border-box'}}>

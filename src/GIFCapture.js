@@ -18,7 +18,6 @@ class GIFCapture extends Component {
     'cameraStream': this.state.stream}, async obj => {
         console.log(obj);
         await this.setState({stream: obj.cameraStream});
-        console.log('sdfdl');
     });
     
   }
@@ -40,24 +39,6 @@ class GIFCapture extends Component {
       // Note: Passing an existing camera stream will allow you to create another GIF and/or snapshot without
       //	asking for the user's permission to access the camera again if you are not using SSL
       'cameraStream': this.state.stream,
-      'text': this.props.albumId,
-      // The font weight of the text that covers the animated GIF
-      'fontWeight': 'bold',
-      // The font size of the text that covers the animated GIF
-      'fontSize': '16px',
-      // The minimum font size of the text that covers the animated GIF
-      // Note: This option is only applied if the text being applied is cut off
-      'minFontSize': '10px',
-      // Whether or not the animated GIF text will be resized to fit within the GIF container
-      'resizeFont': false,
-      // The font family of the text that covers the animated GIF
-      'fontFamily': 'sans-serif',
-      // The font color of the text that covers the animated GIF
-      'fontColor': '#ffffff',
-      // The horizontal text alignment of the text that covers the animated GIF
-      'textAlign': 'right',
-      // The vertical text alignment of the text that covers the animated GIF
-      'textBaseline': 'bottom',
       'numFrames': 15,
       'progressCallback': (progress) => {this.setState({progress: progress});},
       'completeCallback': () => {this.setState({progress: 0});console.log('done')}

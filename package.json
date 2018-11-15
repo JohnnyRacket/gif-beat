@@ -1,14 +1,15 @@
 {
   "name": "gif-beat",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "private": true,
-  "homepage": "https://johnnyracket.github.io/beat-gif",
+  "homepage": "https://johnnyracket.github.io/gif-beat",
   "dependencies": {
     "axios": "^0.18.0",
     "gifshot": "^0.4.5",
+    "qrcode.react": "^0.8.0",
     "rc-progress": "^2.2.6",
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1"
   },

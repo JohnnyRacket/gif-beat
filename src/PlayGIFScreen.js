@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Axios from 'axios';
 import secrets from './secrets/config.json';
+import * as QRCode from 'qrcode.react';
 
 class PlayGIFScreen extends Component {
 
@@ -11,21 +12,25 @@ class PlayGIFScreen extends Component {
     index: 0,
     progress: 0,
     bpm: 60,
-    pingpong: true
+    multi: true,
+    flip: false
   }
 
   componentDidMount(){
-      this.getGIFs();
+    this.getGIFs();
     setInterval(() => {
         this.getGIFs();
     }, 300000);
     setInterval(() => {
-        this.setState({index: Math.floor(this.state.gifs.length * Math.random()), pingpong: (Math.random() >= 0.5)})
-    }, 20000);
+        this.changeGIF();
+    }, 15000);
   }
 
+  changeGIF(){
+    this.setState({index: Math.floor(this.state.gifs.length * Math.random()), multi: (Math.random() >= 0.5), flip: (Math.random() >= 0.5)})
+  }
   async getGIFs(){
-    let res = await Axios.get(`https://api.imgur.com/3/album/${this.props.albumId}`, {headers: {Authorization: "Client-ID " + secrets.imgur.client_id}});
+    let res = await Axios.get(`https://api.imgur.com/3/album/${this.props.match.params.albumid}`, {headers: {Authorization: "Client-ID " + secrets.imgur.client_id}});
     let gifs = res.data.data.images;
     console.log(gifs);
     this.setState({gifs: gifs});
@@ -34,8 +39,8 @@ class PlayGIFScreen extends Component {
   render() {
     return (
       <div className="App" style={{height: '100vh', width: '100vw'}}>
-          {this.state.gifs.length > 0 ? <x-gif fill ping-pong={this.state.pingpong} bpm={this.state.bpm} src={this.state.gifs[this.state.index].link}></x-gif> : <x-gif fill src="https://i.imgur.com/IUNMjf1.gif"></x-gif>}
-          <button style={{position: 'absolute', bottom: '2rem', left: '2rem'}} onClick={() => this.getGIFs()}>🔄</button>
+          {this.state.gifs.length > 0 ? <div style={{width: '100%', height: '100%', minHeight: '100vh', transform: `scale(${this.state.flip ? -1 : 1})`, background: `url(${this.state.gifs[this.state.index].link}) ${this.state.multi ? 'center center / cover' : ''}`}} /> : ""}
+          {this.props.deletehash? <QRCode value={`https://johnnyracket.github.io/gif-beat/#/record/${this.props.deletehash}`}  style={{position: 'absolute', bottom: '2rem', right: '2rem', padding: '1rem'}}/> : "" }
       </div>
     );
   }

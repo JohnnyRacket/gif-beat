@@ -40,7 +40,7 @@ class PlayGIFScreen extends Component {
     return (
       <div className="App" style={{height: '100vh', width: '100vw'}}>
           {this.state.gifs.length > 0 ? <div style={{width: '100%', height: '100%', minHeight: '100vh', transform: `scale(${this.state.flip ? -1 : 1})`, background: `url(${this.state.gifs[this.state.index].link}) ${this.state.multi ? 'center center / cover' : ''}`}} /> : ""}
-          {this.props.deletehash? <QRCode value={`https://johnnyracket.github.io/gif-beat/#/record/${this.props.deletehash}`}  style={{position: 'absolute', bottom: '2rem', right: '2rem', padding: '1rem'}}/> : "" }
+          {this.props.deletehash? <QRCode value={`https://johnnyracket.github.io/gif-beat/#/record/${this.props.deletehash}`}  style={{position: 'absolute', bottom: '1rem', right: '1rem', padding: '.5rem', background: 'white'}}/> : "" }
       </div>
     );
   }

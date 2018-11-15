@@ -1,7 +1,7 @@
 {
   "main.css": "/gif-beat/static/css/main.4e7cc011.chunk.css",
-  "main.js": "/gif-beat/static/js/main.bfac8bdb.chunk.js",
-  "main.js.map": "/gif-beat/static/js/main.bfac8bdb.chunk.js.map",
+  "main.js": "/gif-beat/static/js/main.e5f19f9f.chunk.js",
+  "main.js.map": "/gif-beat/static/js/main.e5f19f9f.chunk.js.map",
   "static/js/1.94d8b4b5.chunk.js": "/gif-beat/static/js/1.94d8b4b5.chunk.js",
   "static/js/1.94d8b4b5.chunk.js.map": "/gif-beat/static/js/1.94d8b4b5.chunk.js.map",
   "runtime~main.js": "/gif-beat/static/js/runtime~main.8d7aae97.js",
@@ -9,6 +9,6 @@
   "static/media/pattern.svg": "/gif-beat/static/media/pattern.4c18f130.svg",
   "static/css/main.4e7cc011.chunk.css.map": "/gif-beat/static/css/main.4e7cc011.chunk.css.map",
   "index.html": "/gif-beat/index.html",
-  "precache-manifest.c78a61597944f7fe7faae58530095fb2.js": "/gif-beat/precache-manifest.c78a61597944f7fe7faae58530095fb2.js",
+  "precache-manifest.67c1a37d82cfa4ee148287b6541c6fde.js": "/gif-beat/precache-manifest.67c1a37d82cfa4ee148287b6541c6fde.js",
   "service-worker.js": "/gif-beat/service-worker.js"
 }

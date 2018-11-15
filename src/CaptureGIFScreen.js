@@ -22,9 +22,9 @@ class CaptureGIFScreen extends Component {
     return (
       <div style={{width: '100%', height: '100%'}}>
         {this.state.capturing ? 
-        <GIFCapture saveGIF={this.setGIF.bind(this)} albumId={this.props.match.params.albumid}/> 
+        <GIFCapture saveGIF={this.setGIF.bind(this)} albumId={this.props.match.params.deletehash}/> 
         : 
-        <GIFPreview gif={this.state.gif} albumId={this.props.match.params.albumid} exit={this.capture.bind(this)}/>
+        <GIFPreview gif={this.state.gif} albumId={this.props.match.params.deletehash} exit={this.capture.bind(this)}/>
         }   
       </div>
     );

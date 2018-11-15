@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "66b4bbffae2d86aee2d5",
+    "revision": "bfac8bdbc8371891634a",
     "url": "/gif-beat/static/css/main.4e7cc011.chunk.css"
   },
   {
-    "revision": "66b4bbffae2d86aee2d5",
-    "url": "/gif-beat/static/js/main.66b4bbff.chunk.js"
+    "revision": "bfac8bdbc8371891634a",
+    "url": "/gif-beat/static/js/main.bfac8bdb.chunk.js"
   },
   {
     "revision": "94d8b4b5d401ea04ee04",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/gif-beat/static/media/pattern.4c18f130.svg"
   },
   {
-    "revision": "19d531e79ecb1f81df26ed366d2927fe",
+    "revision": "8ddaf4e073568d252fa0ddf10967c9e0",
     "url": "/gif-beat/index.html"
   }
 ];

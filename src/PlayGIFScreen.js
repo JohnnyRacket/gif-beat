@@ -13,17 +13,26 @@ class PlayGIFScreen extends Component {
     progress: 0,
     bpm: 60,
     multi: true,
-    flip: false
+    flip: false,
+    getGifs: null,
+    changeGifs: null
   }
 
   componentDidMount(){
     this.getGIFs();
-    setInterval(() => {
+    let getGifs = setInterval(() => {
         this.getGIFs();
     }, 60000);
-    setInterval(() => {
+    let changeGifs = setInterval(() => {
         this.changeGIF();
     }, 15000);
+    this.setState({getGifs: getGifs, changeGifs: changeGifs});
+  }
+
+  componentWillUnmount(){
+    clearInterval(this.state.getGifs);
+    clearInterval(this.state.changeGifs);
+    this.setState({getGifs: null, changeGifs: null});
   }
 
   changeGIF(){

@@ -10,7 +10,7 @@ import bg from './pattern.svg';
 class App extends Component {
 
   state = {
-    albumId: "null",
+    albumId: "",
     deletehash: ""
   }
 
@@ -42,8 +42,8 @@ class App extends Component {
           </div>
         )}>
         </Route>
-        <Route path="/record/:deletehash" render={(props) => <CaptureGIFScreen albumId={this.state.albumId} {...props} />} />
-        <Route path="/view/:albumid" render={(props) => <PlayGIFScreen albumId={this.state.albumId} deletehash={this.state.deletehash} {...props} />} />
+        <Route path="/record/:deletehash?" render={(props) => <CaptureGIFScreen albumId={this.state.albumId} {...props} />} />
+        <Route path="/view/:albumid?" render={(props) => <PlayGIFScreen albumId={this.state.albumId} deletehash={this.state.deletehash} {...props} />} />
       </div>      
     );}
 }

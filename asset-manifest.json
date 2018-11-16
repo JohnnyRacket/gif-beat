@@ -1,7 +1,7 @@
 {
-  "main.css": "/gif-beat/static/css/main.41e02c64.chunk.css",
-  "main.js": "/gif-beat/static/js/main.332207e5.chunk.js",
-  "main.js.map": "/gif-beat/static/js/main.332207e5.chunk.js.map",
+  "main.css": "/gif-beat/static/css/main.37174e54.chunk.css",
+  "main.js": "/gif-beat/static/js/main.1a6631e5.chunk.js",
+  "main.js.map": "/gif-beat/static/js/main.1a6631e5.chunk.js.map",
   "static/js/1.c6d16bf9.chunk.js": "/gif-beat/static/js/1.c6d16bf9.chunk.js",
   "static/js/1.c6d16bf9.chunk.js.map": "/gif-beat/static/js/1.c6d16bf9.chunk.js.map",
   "runtime~main.js": "/gif-beat/static/js/runtime~main.8d7aae97.js",
@@ -9,8 +9,8 @@
   "static/media/photo-camera.svg": "/gif-beat/static/media/photo-camera.cab0ad14.svg",
   "static/media/three-dots.svg": "/gif-beat/static/media/three-dots.7627bc82.svg",
   "static/media/pattern.svg": "/gif-beat/static/media/pattern.4c18f130.svg",
-  "static/css/main.41e02c64.chunk.css.map": "/gif-beat/static/css/main.41e02c64.chunk.css.map",
+  "static/css/main.37174e54.chunk.css.map": "/gif-beat/static/css/main.37174e54.chunk.css.map",
   "index.html": "/gif-beat/index.html",
-  "precache-manifest.6c18c9371bd3304fe002e6612711f6f1.js": "/gif-beat/precache-manifest.6c18c9371bd3304fe002e6612711f6f1.js",
+  "precache-manifest.fa6f2cbfdf0aba47b1a94a9f8fed5641.js": "/gif-beat/precache-manifest.fa6f2cbfdf0aba47b1a94a9f8fed5641.js",
   "service-worker.js": "/gif-beat/service-worker.js"
 }

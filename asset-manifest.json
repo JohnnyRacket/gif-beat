@@ -1,14 +1,15 @@
 {
-  "main.css": "/gif-beat/static/css/main.4e7cc011.chunk.css",
-  "main.js": "/gif-beat/static/js/main.e5f19f9f.chunk.js",
-  "main.js.map": "/gif-beat/static/js/main.e5f19f9f.chunk.js.map",
-  "static/js/1.94d8b4b5.chunk.js": "/gif-beat/static/js/1.94d8b4b5.chunk.js",
-  "static/js/1.94d8b4b5.chunk.js.map": "/gif-beat/static/js/1.94d8b4b5.chunk.js.map",
+  "main.css": "/gif-beat/static/css/main.68c45e0a.chunk.css",
+  "main.js": "/gif-beat/static/js/main.e7c315f1.chunk.js",
+  "main.js.map": "/gif-beat/static/js/main.e7c315f1.chunk.js.map",
+  "static/js/1.c2ed42f4.chunk.js": "/gif-beat/static/js/1.c2ed42f4.chunk.js",
+  "static/js/1.c2ed42f4.chunk.js.map": "/gif-beat/static/js/1.c2ed42f4.chunk.js.map",
   "runtime~main.js": "/gif-beat/static/js/runtime~main.8d7aae97.js",
   "runtime~main.js.map": "/gif-beat/static/js/runtime~main.8d7aae97.js.map",
+  "static/media/three-dots.svg": "/gif-beat/static/media/three-dots.7627bc82.svg",
   "static/media/pattern.svg": "/gif-beat/static/media/pattern.4c18f130.svg",
-  "static/css/main.4e7cc011.chunk.css.map": "/gif-beat/static/css/main.4e7cc011.chunk.css.map",
+  "static/css/main.68c45e0a.chunk.css.map": "/gif-beat/static/css/main.68c45e0a.chunk.css.map",
   "index.html": "/gif-beat/index.html",
-  "precache-manifest.67c1a37d82cfa4ee148287b6541c6fde.js": "/gif-beat/precache-manifest.67c1a37d82cfa4ee148287b6541c6fde.js",
+  "precache-manifest.cf353a9f2adbaf814817e8676f574867.js": "/gif-beat/precache-manifest.cf353a9f2adbaf814817e8676f574867.js",
   "service-worker.js": "/gif-beat/service-worker.js"
 }

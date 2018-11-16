@@ -32,6 +32,29 @@ html,body
   z-index: -1;
 }
 
+@keyframes rotation {
+  0% {
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+  50% {
+    transform: rotate3d(0, 1, 0, 180deg);
+  }
+  100% {
+    transform: rotate3d(0, 1, 0, 360deg);
+  }
+}
+
+.camera-loader{
+  height: 12rem;
+  width: 12rem;
+  animation-name: rotation;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 2.5s;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+}
+
 @media screen and (max-aspect-ratio: 1920/1080) {
   .video-container > video {
     height: 100%;

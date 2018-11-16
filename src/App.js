@@ -11,7 +11,7 @@ class App extends Component {
 
   state = {
     albumId: "null",
-    deletehash: "null"
+    deletehash: ""
   }
 
   async createAlbum(){

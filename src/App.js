@@ -10,8 +10,8 @@ import bg from './pattern.svg';
 class App extends Component {
 
   state = {
-    albumId: "Xb6wU",
-    deletehash: ""
+    albumId: "null",
+    deletehash: "null"
   }
 
   async createAlbum(){

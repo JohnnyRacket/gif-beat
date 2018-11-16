@@ -16,14 +16,13 @@ class GIFCapture extends Component {
     'webcamVideoElement': this.state.video,
     'keepCameraOn': true,
     'cameraStream': this.state.stream}, async obj => {
-        console.log(obj);
         await this.setState({stream: obj.cameraStream});
     });
     
   }
 
   captureGIF(){
-
+    this.setState({progress: .025});
     gifshot.createGIF({
         'gifWidth': 352,
         'gifHeight': 240,
@@ -41,10 +40,9 @@ class GIFCapture extends Component {
       'cameraStream': this.state.stream,
       'numFrames': 15,
       'progressCallback': (progress) => {this.setState({progress: progress});},
-      'completeCallback': () => {this.setState({progress: 0});console.log('done')}
+      'completeCallback': () => {this.setState({progress: 0})}
     }, (obj) => {
       if(!obj.error) {
-        console.log(obj);
         this.props.saveGIF(obj.image);
       }
     });
@@ -55,7 +53,7 @@ class GIFCapture extends Component {
         <div className="video-container" style={{zIndex: 100}}>
             <div style={{width: '100px', position: 'absolute', bottom: '4rem', left: '50%', transform: 'translateX(-50%)'}}>
                 <Circle percent={this.state.progress * 100} strokeWidth="10" strokeColor="#e74c3c" />
-                <button style={{position: 'absolute',left: '50%', transform: 'translate(-50%, -50%)', top: '48%', background: 'transparent', fontWeight: 'bold', color: 'white', border: 'none', fontSize: '2rem', outline: 'none'}} onClick={() => this.captureGIF()}>Rec.</button>
+                <button style={{padding: '2rem', position: 'absolute',left: '50%', transform: 'translate(-50%, -50%)', top: '48%', background: 'transparent', fontWeight: 'bold', color: 'white', border: 'none', fontSize: '2rem', outline: 'none'}} onClick={() => this.captureGIF()}>Rec.</button>
 
             </div>
             <video className="video" id="preview-video"></video>

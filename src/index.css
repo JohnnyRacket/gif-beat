@@ -57,7 +57,7 @@ html,body
 
 @media screen and (max-aspect-ratio: 1920/1080) {
   .video-container > video {
-    height: 100%;
+    height: calc(100% + 1px);
     width: auto;
   }
 }

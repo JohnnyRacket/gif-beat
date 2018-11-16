@@ -28,7 +28,7 @@ self.__precacheManifest = [
     "url": "/gif-beat/static/media/pattern.4c18f130.svg"
   },
   {
-    "revision": "d040b9450e9ac2550710f7850b025500",
+    "revision": "f3becb2b3b21edb7f5bea4af4e28a3ed",
     "url": "/gif-beat/index.html"
   }
 ];

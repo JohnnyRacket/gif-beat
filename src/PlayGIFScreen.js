@@ -20,7 +20,7 @@ class PlayGIFScreen extends Component {
     this.getGIFs();
     setInterval(() => {
         this.getGIFs();
-    }, 300000);
+    }, 60000);
     setInterval(() => {
         this.changeGIF();
     }, 15000);
@@ -30,9 +30,10 @@ class PlayGIFScreen extends Component {
     this.setState({index: Math.floor(this.state.gifs.length * Math.random()), multi: (Math.random() >= 0.5), flip: (Math.random() >= 0.5)})
   }
   async getGIFs(){
+    //await Axios.get(`https://imgur.com/a/${this.this.props.match.params.albumid}`);
     let res = await Axios.get(`https://api.imgur.com/3/album/${this.props.match.params.albumid}`, {headers: {Authorization: "Client-ID " + secrets.imgur.client_id}});
     let gifs = res.data.data.images;
-    console.log(gifs);
+    //console.log(gifs);
     this.setState({gifs: gifs});
   }
 

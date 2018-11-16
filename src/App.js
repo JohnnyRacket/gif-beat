@@ -16,8 +16,8 @@ class App extends Component {
 
   async createAlbum(){
     let res = await Axios.post("https://api.imgur.com/3/album", {} ,{headers: {Authorization: "Client-ID " + secrets.imgur.client_id}});
-    console.log(res.data.data.id);
-    console.log(res.data.data.deletehash);
+    //console.log(res.data.data.id);
+    //console.log(res.data.data.deletehash);
     await this.setState({albumId: res.data.data.id, deletehash: res.data.data.deletehash});
     this.props.history.push("/view/" + this.state.albumId);
   }
